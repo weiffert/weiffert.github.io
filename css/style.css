@@ -7,3 +7,13 @@ body
 {
   border-radius: 0;
 }
+
+.no-margin
+{
+  margin: 0;
+}
+
+div.space-3-5em
+{
+  height: 3.5em;
+}
