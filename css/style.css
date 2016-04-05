@@ -2,3 +2,8 @@ body
 {
   font-family: 'Quicksand';
 }
+
+.navbar
+{
+  border-radius: none;
+}
