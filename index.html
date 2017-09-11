@@ -35,13 +35,14 @@
     <div class="page container-fluid">
       <div class="row">
         <div class="col-xs-6 col-sm-2 home block block-button link1" data-toggle="modal" data-target="#resume">
-          <p class="link1">resume</p>
+          <p class="link1">Resume</p>
         </div>
         <div class="hidden-xs col-sm-8 home block"></div>
-        <div class="col-xs-6 col-sm-2 home block block-button link2" data-toggle="modal" data-target="#websites">
-          <p class="link2">websites</p>
+        <div onclick="location.href='https://github.com/weiffert'" class="col-xs-6 col-sm-2 home block block-button link2">
+          <p class="link2">GitHub</p>
         </div>
       </div>
+      
       <div class="row">
         <div class="hidden-xs col-sm-2 home block space"></div>
         <div class="col-xs-12 col-sm-8 home space block block-empty">
@@ -49,16 +50,14 @@
         </div>
         <div class="hidden-xs col-sm-2 home block space"></div>
       </div>
+      
       <div class="row">
-        <!--For implementing the reflections section...Do the following-->
-        <!--Replace block-none class with block-button. Add link-3 class.-->
-        <!--Add data-toggle="modal" and data-target="#reflections"-->
-        <div class="col-xs-6 col-sm-2 home block block-none">
-          <!--<p class="link3">reflections</p>-->
+        <div onclick="location.href='https://purdue-csm.symplicity.com/profiles/william.eiffert'" class="col-xs-6 col-sm-2 home block block-button link3">
+          <p class="link4">MyCCO</p>
         </div>
         <div class="hidden-xs col-sm-8 home block"></div>
-        <div class="col-xs-6 col-sm-2 home block block-button link4" data-toggle="modal" data-target="#designs">
-          <p class="link4">designs</p>
+        <div onclick="location.href='https://www.linkedin.com/in/william-eiffert/'" class="col-xs-6 col-sm-2 home block block-button link4">
+          <p class="link4">LinkedIn</p>
         </div>
       </div>
     </div>
@@ -70,110 +69,14 @@
           <div class="modal-body section resume-section">
             <!-- Nav tabs -->
             <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation" class="2 close link1" data-dismiss="modal" aria-label="Close"><a href="#return" role="tab" data-toggle="tab" aria-expanded="false"><p>return</p></a></li>
-              <li role="presentation" class="2 active last-click link2"><a href="#resume-page" aria-controls="resume-page" role="tab" data-toggle="tab" aria-expanded="true"><p>resume</p></a></li>
+              <li role="presentation" class="2 close link1" data-dismiss="modal" aria-label="Close"><a href="#return" role="tab" data-toggle="tab" aria-expanded="false"><p>Return</p></a></li>
+              <li role="presentation" class="2 active last-click link2"><a href="#resume-page" aria-controls="resume-page" role="tab" data-toggle="tab" aria-expanded="true"><p>Resume</p></a></li>
              </ul>
           
             <!-- Tab panes -->
             <div class="tab-content">
               <div role="tabpanel" class="tab-pane active" id="resume-page">
                 <iframe src="html/resume.html" frameborder="0"></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Modal Websites-->
-    <div class="modal fade" id="websites" tabindex="-1" role="dialog" aria-labelledby="websites">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-body section websites-section">
-            <!-- Nav tabs -->
-            <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation" class="3 close link1" data-dismiss="modal" aria-label="Close"><a href="#return" role="tab" data-toggle="tab" aria-expanded="false"><p>return</p></a></li>
-              <li role="presentation" class="3 active last-click link2"><a href="#family-page" aria-controls="family-page" role="tab" data-toggle="tab" aria-expanded="true"><p>family</p></a></li>
-              <li role="presentation" class="3 link3"><a href="#club-page" aria-controls="club-page" role="tab" data-toggle="tab" aria-expanded="false"><p>club</p></a></li>
-             </ul>
-          
-            <!-- Tab panes -->
-            <div class="tab-content">
-              <div role="tabpanel" class="tab-pane active" id="family-page">
-                  <iframe src="http://weiffert.com/family-website" frameborder="0"></iframe>
-              </div>
-              
-              <div role="tabpanel" class="tab-pane" id="club-page">
-                <iframe src="http://weiffert.com/club-website/root/index.html" frameborder="0"></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Modal Designs-->
-    <div class="modal fade" id="designs" tabindex="-1" role="dialog" aria-labelledby="designs">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-body section designs-section">
-            <!-- Nav tabs -->
-            <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation" class="5 close link1" data-dismiss="modal" aria-label="Close"><a href="#return" role="tab" data-toggle="tab" aria-expanded="false"><p>return</p></a></li>
-              <li role="presentation" class="5 link2 active last-click"><a href="#family-page-design" aria-controls="family-page-design" role="tab" data-toggle="tab" aria-expanded="true"><p>family</p></a></li>
-              <li role="presentation" class="5 link3"><a href="#club-page-design" aria-controls="club-page-design" role="tab" data-toggle="tab" aria-expanded="false"><p>club</p></a></li>
-              <li role="presentation" class="5 link4"><a href="#band-page-design" aria-controls="band-page-design" role="tab" data-toggle="tab" aria-expanded="false"><p>band</p></a></li>
-              <li role="presentation" class="5 link5"><a href="#business-page-design" aria-controls="business-page-design" role="tab" data-toggle="tab" aria-expanded="false"><p>business</p></a></li>
-            </ul>
-          
-            <!-- Tab panes -->
-            <div class="tab-content">
-              <div role="tabpanel" class="tab-pane active" id="family-page-design">
-                <iframe src="html/design-family.html" frameborder="0"></iframe>
-              </div>
-              
-              <div role="tabpanel" class="tab-pane" id="club-page-design">
-                <iframe src="html/design-club.html" frameborder="0"></iframe>
-              </div>
-                
-              <div role="tabpanel" class="tab-pane" id="band-page-design">
-                <iframe src="html/design-band.html" frameborder="0"></iframe>
-              </div>
-              
-              <div role="tabpanel" class="tab-pane" id="business-page-design">
-                <iframe src="html/design-business.html" frameborder="0"></iframe>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    
-    <!-- Modal Reflections-->
-    <div class="modal fade" id="reflections" tabindex="-1" role="dialog" aria-labelledby="reflections">
-      <div class="modal-dialog" role="document">
-        <div class="modal-content">
-          <div class="modal-body section reflections-section">
-            <!-- Nav tabs -->
-            <ul class="nav nav-tabs" role="tablist">
-              <li role="presentation" class="4 close link1" data-dismiss="modal" aria-label="Close"><a href="#return" role="tab" data-toggle="tab" aria-expanded="false"><p>return</p></a></li>
-              <li role="presentation" class="4 active last-click link2"><a href="#reflections-course" aria-controls="reflections-course" role="tab" data-toggle="tab" aria-expanded="true"><p>course</p></a></li>
-              <li role="presentation" class="4 link3"><a href="#reflections-family" aria-controls="reflections-family" role="tab" data-toggle="tab" aria-expanded="true"><p>family</p></a></li>
-              <li role="presentation" class="4 link4"><a href="#reflections-club" aria-controls="reflections-club" role="tab" data-toggle="tab" aria-expanded="true"><p>club</p></a></li>
-            </ul>
-          
-            <!-- Tab panes -->
-            <div class="tab-content">
-              <div role="tabpanel" class="tab-pane active" id="reflections-course">
-                <iframe src="html/reflections-course.html" frameborder="0"></iframe>
-              </div>
-              
-              <div role="tabpanel" class="tab-pane" id="reflections-family">
-                <iframe src="html/reflections-family.html" frameborder="0"></iframe>
-              </div>
-              
-              <div role="tabpanel" class="tab-pane" id="reflections-club">
-                <iframe src="html/reflections-club.html" frameborder="0"></iframe>
               </div>
             </div>
           </div>
