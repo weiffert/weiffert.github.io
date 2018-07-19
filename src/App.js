@@ -17,10 +17,10 @@ class App extends Component {
       <div className="App">
         <Header />
         <Switch>
-          <Route path="/" render={() => <Work />} />
-          <Route path="/about" render={() => <About />} />
-          <Route path="/project" render={() => <ProjectList />} />
           <Route path="/project/:id" render={() => <Project />} />
+          <Route path="/project" render={() => <ProjectList />} />
+          <Route path="/about" render={() => <About />} />
+          <Route path="/" render={() => <Work />} />
         </Switch>
         <Contact />
         <Footer />
