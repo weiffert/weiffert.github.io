@@ -6,8 +6,9 @@ class ProjectItem extends Component {
   render() {
     return (
       <div className="ProjectItem">
-        ProjectItem
-        <NavLink to={`project/${this.props.id}`} />
+        <NavLink to={`project/${this.props.project.id}`}>
+          {this.props.project.name}
+        </NavLink>
       </div>
     );
   }
