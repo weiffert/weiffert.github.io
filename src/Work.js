@@ -10,7 +10,7 @@ class Work extends Component {
       <div className="Work">
         Work
         <Splash />
-        <ProjectList />
+        <ProjectList max={5} />
       </div>
     );
   }

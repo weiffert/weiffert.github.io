@@ -11,18 +11,22 @@ class ProjectList extends Component {
     };
     fetch("https://api.github.com/users/weiffert/repos")
       .then(response => response.json())
-      .then(repos =>
+      .then(repos => {
+        repos.sort((a, b) => (a.pushed_at > b.pushed_at ? -1 : 1));
         this.setState({
           repos,
-        })
-      );
+        });
+      });
   }
 
   render() {
     return (
       <div className="ProjectList">
         ProjectList
-        {this.state.repos.map(repo => <ProjectItem project={repo} />)}
+        {this.state.repos.map(
+          (repo, index) =>
+            index < this.props.max ? <ProjectItem project={repo} /> : ""
+        )}
       </div>
     );
   }
