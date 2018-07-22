@@ -3,7 +3,8 @@ import "./Project.css";
 
 class Project extends Component {
   render() {
-    return <div className="Project">Project</div>;
+    console.log(this.props);
+    return <div className="Project">Project {this.props.repo.name}</div>;
   }
 }
 

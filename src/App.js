@@ -12,15 +12,45 @@ import Contact from "./Contact";
 import Footer from "./Footer";
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      repos: [],
+    };
+    if (false) {
+      fetch("https://api.github.com/users/weiffert/repos")
+        .then(response => response.json())
+        .then(repos => {
+          repos.sort((a, b) => (a.pushed_at > b.pushed_at ? -1 : 1));
+          window.localStorage.setItem("repos", JSON.stringify(repos));
+          this.setState({
+            repos,
+          });
+        });
+    } else {
+      this.state.repos = JSON.parse(window.localStorage.getItem("repos"));
+    }
+  }
+
   render() {
     return (
       <div className="App">
         <Header />
         <Switch>
-          <Route path="/project/:id" render={() => <Project />} />
-          <Route path="/project" render={() => <ProjectList />} />
+          <Route
+            path="/project/:id"
+            render={({ match }) => (
+              <Project
+                repo={this.state.repos.find(repo => repo.id == match.params.id)}
+              />
+            )}
+          />
+          <Route
+            path="/project"
+            render={() => <ProjectList repos={this.state.repos} />}
+          />
           <Route path="/about" render={() => <About />} />
-          <Route path="/" render={() => <Work />} />
+          <Route path="/" render={() => <Work repos={this.state.repos} />} />
         </Switch>
         <Contact />
         <Footer />
