@@ -20,9 +20,7 @@ class ProjectList extends Component {
           });
         });
     } else {
-      const repos = JSON.parse(window.localStorage.getItem("repos"));
-      this.state.repos = repos;
-      console.table(repos);
+      this.state.repos = JSON.parse(window.localStorage.getItem("repos"));
     }
   }
 
