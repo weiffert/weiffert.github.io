@@ -47,7 +47,12 @@ class App extends Component {
           />
           <Route
             path="/project"
-            render={() => <ProjectList repos={this.state.repos} />}
+            render={() => (
+              <ProjectList
+                max={this.state.repos.length}
+                repos={this.state.repos}
+              />
+            )}
           />
           <Route path="/about" render={() => <About />} />
           <Route path="/" render={() => <Work repos={this.state.repos} />} />
