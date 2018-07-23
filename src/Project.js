@@ -9,15 +9,21 @@ class Project extends Component {
     this.state = {
       body: "BAD wifi. PLEASE bear WITH me.",
     };
-    fetch(`${this.props.repo.url}/readme`)
-      .then(response => response.json())
-      .then(response => {
-        const markdown = Base64.decode(response.content);
-        this.setState({ body: markdown });
-      });
+    if (false) {
+      fetch(`${this.props.repo.url}/readme`)
+        .then(response => response.json())
+        .then(response => {
+          const markdown = Base64.decode(response.content);
+          localStorage.setItem("markdown", JSON.stringify(markdown));
+          this.setState({ body: markdown });
+        });
+    } else {
+      this.state = {
+        body: JSON.parse(localStorage.getItem("markdown")),
+      };
+    }
   }
   render() {
-    console.log(this.props);
     const reader = new Commonmark.Parser();
     const render = new Commonmark.HtmlRenderer();
     const parsed = reader.parse(this.state.body);
