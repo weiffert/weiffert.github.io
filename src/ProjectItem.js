@@ -7,7 +7,8 @@ class ProjectItem extends Component {
     return (
       <div className="ProjectItem">
         <NavLink to={`project/${this.props.project.id}`}>
-          {this.props.project.name}
+          <h1 className="name">{this.props.project.name}</h1>
+          <p className="description">{this.props.project.description}</p>
         </NavLink>
       </div>
     );
