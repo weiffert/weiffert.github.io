@@ -8,7 +8,6 @@ class Work extends Component {
   render() {
     return (
       <div className="Work">
-        Work
         <Splash />
         <ProjectList max={5} repos={this.props.repos} />
       </div>

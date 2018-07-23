@@ -7,7 +7,6 @@ class ProjectList extends Component {
   render() {
     return (
       <div className="ProjectList">
-        ProjectList
         {this.props.repos.map(
           (repo, index) =>
             index < this.props.max ? (
