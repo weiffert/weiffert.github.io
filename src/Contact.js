@@ -6,13 +6,25 @@ class Contact extends Component {
     return (
       <div className="Contact">
         <h1>get in touch</h1>
-        <a target="_blank" href="mailto:weiffert@purdue.edu">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="mailto:weiffert@purdue.edu"
+        >
           weiffert@purdue.edu
         </a>
-        <a target="_blank" href="https://github.com/weiffert">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://github.com/weiffert"
+        >
           github
         </a>
-        <a target="_blank" href="https://www.linkedin.com/in/william-eiffert/">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://www.linkedin.com/in/william-eiffert/"
+        >
           linkedin
         </a>
         {/* <form>

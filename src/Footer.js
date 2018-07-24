@@ -6,7 +6,11 @@ class Footer extends Component {
     return (
       <div className="Footer">
         <p>© 2018 by William Eiffert</p>
-        <a target="_blank" href="mailto:weiffert@purdue.edu">
+        <a
+          target="_blank"
+          rel="noopener noreferrer"
+          href="mailto:weiffert@purdue.edu"
+        >
           weiffert@purdue.edu
         </a>
       </div>
