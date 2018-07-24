@@ -16,20 +16,7 @@ class Splash extends Component {
           <NavLink to="/about">
             <p>about</p>
           </NavLink>
-          <p>
-            <a target="_blank" href="mailto:weiffert@purdue.edu">
-              weiffert@purdue.edu
-            </a>
-            <a target="_blank" href="https://github.com/weiffert">
-              github
-            </a>
-            <a
-              target="_blank"
-              href="https://www.linkedin.com/in/william-eiffert/"
-            >
-              linkedin
-            </a>
-          </p>
+          <p>web developer - student - coding for fun</p>
         </div>
       </div>
     );
