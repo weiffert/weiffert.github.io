@@ -9,6 +9,12 @@ class Contact extends Component {
         <a target="_blank" href="mailto:weiffert@purdue.edu">
           weiffert@purdue.edu
         </a>
+        <a target="_blank" href="https://github.com/weiffert">
+          github
+        </a>
+        <a target="_blank" href="https://www.linkedin.com/in/william-eiffert/">
+          linkedin
+        </a>
         {/* <form>
           <input
             type="text"
