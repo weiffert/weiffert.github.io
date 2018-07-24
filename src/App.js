@@ -55,6 +55,7 @@ class App extends Component {
             )}
           />
           <Route path="/about" render={() => <About />} />
+          <Route path="/contact" render={() => ""} />
           <Route path="/" render={() => <Work repos={this.state.repos} />} />
         </Switch>
         <Contact />
