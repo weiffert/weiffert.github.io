@@ -7,14 +7,26 @@ class ProjectList extends Component {
   render() {
     return (
       <div className="ProjectList">
-        {this.props.repos.map(
-          (repo, index) =>
-            index < this.props.max ? (
-              <ProjectItem project={repo} key={repo.id} />
-            ) : (
-              ""
-            )
-        )}
+        <div className="one">
+          {this.props.repos.map(
+            (repo, index) =>
+              index < this.props.max && index % 2 == 0 ? (
+                <ProjectItem project={repo} key={repo.id} />
+              ) : (
+                ""
+              )
+          )}
+        </div>
+        <div className="two">
+          {this.props.repos.map(
+            (repo, index) =>
+              index < this.props.max && index % 2 != 0 ? (
+                <ProjectItem project={repo} key={repo.id} />
+              ) : (
+                ""
+              )
+          )}
+        </div>
       </div>
     );
   }

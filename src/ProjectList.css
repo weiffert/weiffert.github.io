@@ -1,0 +1,19 @@
+.ProjectList {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.ProjectList .one,
+.ProjectList .two {
+  margin: 5vw;
+}
+
+.ProjectList .one {
+  margin-left: 10vw;
+}
+
+.ProjectList .two {
+  margin-right: 10vw;
+  margin-top: 30vh;
+}
