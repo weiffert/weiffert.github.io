@@ -1,16 +1,30 @@
 .Header {
-  position: fixed;
+  position: absolute;
   width: 100vw;
   display: flex;
   flex-direction: row;
 }
 
+.Header.fixed {
+  position: fixed;
+}
+
+.Header .title {
+  flex-grow: 1;
+  text-align: center;
+}
+
 .Header h1 {
   margin: 0;
+  margin-top: 30vh;
   font-size: 10vh;
   color: darkblue;
   /* transition: font-size cubic-bezier(0.6, -0.28, 0.74, 0.05) 0.5s; */
   transition: font-size ease-in-out 0.3s;
+}
+
+.Header.fixed h1 {
+  margin-top: 0;
 }
 
 .Header h1.small {
@@ -18,9 +32,6 @@
 }
 
 .Header .links {
-  flex-grow: 1;
-  display: flex;
-  flex-direction: row-reverse;
   transition: opacity ease-in-out 0.3s;
 }
 

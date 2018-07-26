@@ -4,7 +4,7 @@ import "./Header.css";
 
 class Header extends Component {
   handleScroll = () => {
-    if (this.props.scrollY > window.innerHeight / 2) {
+    if (this.props.scrollY > window.innerHeight * 0.3) {
       return false;
     } else {
       return true;
@@ -13,22 +13,24 @@ class Header extends Component {
 
   render() {
     return (
-      <div className="Header">
-        <div className="title">
-          <NavLink to="/">
-            <h1 className={`${this.handleScroll() ? "" : "small"}`}>
-              WILLIAM EIFFERT
-            </h1>
-          </NavLink>
-        </div>
-        <div className={`links ${this.handleScroll() ? "invisible" : ""}`}>
-          <NavLink to="/about">
-            <p>about</p>
-          </NavLink>
-          <NavLink to="/project">
-            <p>work</p>
-          </NavLink>
-        </div>
+      <div className={`Header ${this.handleScroll() ? "" : "fixed"}`}>
+        <NavLink
+          to="/about"
+          className={`links ${this.handleScroll() ? "invisible" : ""}`}
+        >
+          <p>about</p>
+        </NavLink>
+        <NavLink to="/" className="title">
+          <h1 className={`${this.handleScroll() ? "" : "small"}`}>
+            WILLIAM EIFFERT
+          </h1>
+        </NavLink>
+        <NavLink
+          to="/project"
+          className={`links ${this.handleScroll() ? "invisible" : ""}`}
+        >
+          <p>work</p>
+        </NavLink>
       </div>
     );
   }
