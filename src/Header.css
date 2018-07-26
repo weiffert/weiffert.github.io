@@ -8,6 +8,7 @@
 .Header h1 {
   margin: 0;
   font-size: 10vh;
+  color: darkblue;
   /* transition: font-size cubic-bezier(0.6, -0.28, 0.74, 0.05) 0.5s; */
   transition: font-size ease-in-out 0.3s;
 }
