@@ -16,7 +16,9 @@ class Header extends Component {
       <div className="Header">
         <div className="title">
           <NavLink to="/">
-            <h1>William Eiffert</h1>
+            <h1 className={`${this.handleScroll() ? "" : "small"}`}>
+              William Eiffert
+            </h1>
           </NavLink>
         </div>
         <div className={`links ${this.handleScroll() ? "invisible" : ""}`}>

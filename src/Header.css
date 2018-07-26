@@ -1,15 +1,26 @@
 .Header {
   position: fixed;
-  background-color: green;
   width: 100vw;
   display: flex;
   flex-direction: row;
+}
+
+.Header h1 {
+  margin: 0;
+  font-size: 10vh;
+  /* transition: font-size cubic-bezier(0.6, -0.28, 0.74, 0.05) 0.5s; */
+  transition: font-size ease-in-out 0.3s;
+}
+
+.Header h1.small {
+  font-size: 5vh;
 }
 
 .Header .links {
   flex-grow: 1;
   display: flex;
   flex-direction: row-reverse;
+  transition: opacity ease-in-out 0.3s;
 }
 
 .Header p {
