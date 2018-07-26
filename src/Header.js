@@ -3,6 +3,14 @@ import { NavLink } from "react-router-dom";
 import "./Header.css";
 
 class Header extends Component {
+  handleScroll = () => {
+    if (this.props.scrollY > window.innerHeight / 2) {
+      return false;
+    } else {
+      return true;
+    }
+  };
+
   render() {
     return (
       <div className="Header">
@@ -11,7 +19,7 @@ class Header extends Component {
             <h1>William Eiffert</h1>
           </NavLink>
         </div>
-        <div className="links invisible">
+        <div className={`links ${this.handleScroll() ? "invisible" : ""}`}>
           <NavLink to="/about">
             <p>about</p>
           </NavLink>

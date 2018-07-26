@@ -16,6 +16,7 @@ class App extends Component {
     super(props);
     this.state = {
       repos: [],
+      scrollY: 0,
     };
     if (false) {
       fetch("https://api.github.com/users/weiffert/repos")
@@ -32,10 +33,18 @@ class App extends Component {
     }
   }
 
+  componentDidMount = () => {
+    window.addEventListener("scroll", this.handleScroll);
+  };
+
+  handleScroll = event => {
+    this.setState({ scrollY: window.scrollY });
+  };
+
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header scrollY={this.state.scrollY} />
         <Switch>
           <Route
             path="/project/:id"
