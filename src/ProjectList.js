@@ -10,7 +10,7 @@ class ProjectList extends Component {
         <div className="one">
           {this.props.repos.map(
             (repo, index) =>
-              index < this.props.max && index % 2 == 0 ? (
+              index < this.props.max && index % 2 === 0 ? (
                 <ProjectItem project={repo} key={repo.id} />
               ) : (
                 ""
@@ -20,7 +20,7 @@ class ProjectList extends Component {
         <div className="two">
           {this.props.repos.map(
             (repo, index) =>
-              index < this.props.max && index % 2 != 0 ? (
+              index < this.props.max && index % 2 !== 0 ? (
                 <ProjectItem project={repo} key={repo.id} />
               ) : (
                 ""
