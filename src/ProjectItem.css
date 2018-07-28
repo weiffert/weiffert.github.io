@@ -2,16 +2,27 @@
   width: 10vw;
   height: 60vh;
   display: flex;
-  flex-direction: column-reverse;
+  flex-direction: column;
+  transition: width ease-in-out 2s;
 }
 
 .ProjectItem a {
   position: relative;
-  transform: rotate(-90deg);
-  top: -15%;
-  /* align-self: center; */
+  transform-origin: left top;
+  transform: rotate(90deg);
+  left: 6vw;
   justify-self: center;
   white-space: nowrap;
+  transition: left ease-in-out 2s, transform ease-in-out 2s;
+}
+
+.ProjectItem.expanded a {
+  left: 0;
+  transform: rotate(0deg);
+}
+
+.ProjectItem.expanded {
+  width: 50vw;
 }
 
 .ProjectItem h1 {
