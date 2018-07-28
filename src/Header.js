@@ -21,7 +21,7 @@ class Header extends Component {
         <NavLink
           to="/about"
           className={`links ${
-            this.handleScroll(window.innerHeight * 0.9) ? "invisible" : ""
+            this.handleScroll(window.innerHeight * 0.8) ? "invisible" : ""
           }`}
         >
           <p>about</p>
@@ -38,7 +38,7 @@ class Header extends Component {
         <NavLink
           to="/project"
           className={`links ${
-            this.handleScroll(window.innerHeight * 0.9) ? "invisible" : ""
+            this.handleScroll(window.innerHeight * 0.8) ? "invisible" : ""
           }`}
         >
           <p>work</p>
