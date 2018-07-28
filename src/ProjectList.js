@@ -8,6 +8,7 @@ class ProjectList extends Component {
     super(props);
     this.state = {
       colors: [],
+      color: this.getColor(),
     };
     this.props.repos.forEach(repo => {
       this.state.colors.push(this.getColor());
@@ -21,7 +22,10 @@ class ProjectList extends Component {
 
   render() {
     return (
-      <div className="ProjectList sideScroll">
+      <div
+        className="ProjectList sideScroll"
+        style={{ backgroundColor: this.state.color }}
+      >
         {this.props.repos.map(
           (repo, index) =>
             index < this.props.max ? (

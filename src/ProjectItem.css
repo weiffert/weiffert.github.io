@@ -8,8 +8,8 @@
 .ProjectItem a {
   position: relative;
   transform: rotate(-90deg);
-  top: -40%;
-  align-self: center;
+  top: -15%;
+  /* align-self: center; */
   justify-self: center;
   white-space: nowrap;
 }
