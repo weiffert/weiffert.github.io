@@ -65,11 +65,9 @@ class Splash extends Component {
   render() {
     return (
       <div className="Splash">
-        <div>
-          <NavLink to="/about">
-            <p>{this.state.currentAbout}</p>
-          </NavLink>
-        </div>
+        <NavLink to="/about">
+          <p>{this.state.currentAbout}</p>
+        </NavLink>
       </div>
     );
   }
