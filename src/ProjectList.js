@@ -4,6 +4,20 @@ import "./ProjectList.css";
 import ProjectItem from "./ProjectItem";
 
 class ProjectList extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      colors: [],
+    };
+    this.props.repos.forEach(repo => {
+      this.state.colors.push(this.getColor());
+    });
+  }
+  getColor = () => {
+    return `rgb(${Math.random() * 255}, ${Math.random() *
+      255}, ${Math.random() * 255})`;
+  };
+
   render() {
     return (
       <div className="ProjectList">
@@ -11,7 +25,11 @@ class ProjectList extends Component {
           {this.props.repos.map(
             (repo, index) =>
               index < this.props.max && index % 2 === 0 ? (
-                <ProjectItem project={repo} key={repo.id} />
+                <ProjectItem
+                  color={this.state.colors[index]}
+                  project={repo}
+                  key={repo.id}
+                />
               ) : (
                 ""
               )
@@ -21,7 +39,11 @@ class ProjectList extends Component {
           {this.props.repos.map(
             (repo, index) =>
               index < this.props.max && index % 2 !== 0 ? (
-                <ProjectItem project={repo} key={repo.id} />
+                <ProjectItem
+                  color={this.state.colors[index]}
+                  project={repo}
+                  key={repo.id}
+                />
               ) : (
                 ""
               )
