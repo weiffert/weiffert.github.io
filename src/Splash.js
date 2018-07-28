@@ -12,8 +12,8 @@ class Splash extends Component {
       currentAbout: "",
       currentOther: "",
       about: {
-        one: "web developer - student - coding for fun",
-        two: "about",
+        one: "web developer - student - coding for fun ",
+        two: "about ",
       },
     };
     this.state.currentAbout = this.state.about.one;
@@ -40,7 +40,7 @@ class Splash extends Component {
       ),
     });
 
-    if (this.state.currentAbout.length === 0) {
+    if (this.state.currentAbout.length <= 1) {
       clearInterval(this.state.intervalId);
       this.setState({
         intervalId: setInterval(this.addText, this.state.timeInterval),
