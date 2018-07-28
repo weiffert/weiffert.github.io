@@ -13,6 +13,7 @@ class ProjectList extends Component {
       this.state.colors.push(this.getColor());
     });
   }
+
   getColor = () => {
     return `rgb(${Math.random() * 255}, ${Math.random() *
       255}, ${Math.random() * 255})`;
@@ -20,8 +21,20 @@ class ProjectList extends Component {
 
   render() {
     return (
-      <div className="ProjectList">
-        <div className="one">
+      <div className="ProjectList sideScroll">
+        {this.props.repos.map(
+          (repo, index) =>
+            index < this.props.max ? (
+              <ProjectItem
+                color={this.state.colors[index]}
+                project={repo}
+                key={repo.id}
+              />
+            ) : (
+              ""
+            )
+        )}
+        {/* <div className="one">
           {this.props.repos.map(
             (repo, index) =>
               index < this.props.max && index % 2 === 0 ? (
@@ -48,7 +61,7 @@ class ProjectList extends Component {
                 ""
               )
           )}
-        </div>
+        </div> */}
       </div>
     );
   }

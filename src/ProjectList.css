@@ -4,6 +4,11 @@
   flex-wrap: wrap;
 }
 
+.ProjectList.sideScroll {
+  flex-wrap: nowrap;
+  overflow-x: scroll;
+}
+
 .ProjectList .one,
 .ProjectList .two {
   margin: 5vw;
