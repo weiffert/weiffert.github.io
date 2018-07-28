@@ -4,7 +4,7 @@
   display: flex;
   align-items: center;
   flex-direction: row;
-  background-color: #00008b;
+  background-color: black;
 }
 
 .Header.fixed {
@@ -20,7 +20,7 @@
   margin: 0;
   margin-top: 30vh;
   font-size: 15vh;
-  color: white;
+  color: #ca0909;
   /* transition: font-size cubic-bezier(0.6, -0.28, 0.74, 0.05) 0.5s; */
   transition: font-size ease-in-out 0.3s;
 }
