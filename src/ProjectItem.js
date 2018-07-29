@@ -4,31 +4,27 @@ import "./ProjectItem.css";
 
 class ProjectItem extends Component {
   state = {
-    class: "ProjectItem",
-    expanded: "expanded",
-    className: "ProjectItem",
+    expanded: false,
+    invisible: true,
   };
 
   handleClick = event => {
-    if (this.state.className.indexOf(this.state.expanded) != -1)
-      this.setState({ className: this.state.class });
-    else
-      this.setState({
-        className: `${this.state.class} ${this.state.expanded}`,
-      });
+    this.setState({ expanded: !this.state.expanded });
   };
 
   render() {
     return (
       <div
-        className={this.state.className}
+        className={`ProjectItem ${this.state.expanded ? "expanded" : ""}`}
         style={{ backgroundColor: this.props.color }}
         onClick={this.handleClick}
       >
         <NavLink to={`project/${this.props.project.id}`}>
           <h1 className="name">{this.props.project.name}</h1>
-          {/* <p className="description">{this.props.project.description}</p> */}
         </NavLink>
+        <p className={`description ${this.state.invisible ? "invisible" : ""}`}>
+          {this.props.project.description}
+        </p>
       </div>
     );
   }
