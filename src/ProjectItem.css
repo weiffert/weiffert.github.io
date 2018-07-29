@@ -18,8 +18,8 @@
 }
 
 .ProjectItem.expanded a {
-  left: 0;
-  transform: rotate(0deg);
+  /* left: 0;
+  transform: rotate(0deg); */
 }
 
 .ProjectItem.expanded {
@@ -30,6 +30,6 @@
   margin: 0;
 }
 
-.ProjectItem p {
-  transition: opacity ease-in 0.5s;
+.ProjectItem .description {
+  display: none;
 }
