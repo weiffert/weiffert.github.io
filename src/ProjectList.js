@@ -38,34 +38,6 @@ class ProjectList extends Component {
               ""
             )
         )}
-        {/* <div className="one">
-          {this.props.repos.map(
-            (repo, index) =>
-              index < this.props.max && index % 2 === 0 ? (
-                <ProjectItem
-                  color={this.state.colors[index]}
-                  project={repo}
-                  key={repo.id}
-                />
-              ) : (
-                ""
-              )
-          )}
-        </div>
-        <div className="two">
-          {this.props.repos.map(
-            (repo, index) =>
-              index < this.props.max && index % 2 !== 0 ? (
-                <ProjectItem
-                  color={this.state.colors[index]}
-                  project={repo}
-                  key={repo.id}
-                />
-              ) : (
-                ""
-              )
-          )}
-        </div> */}
       </div>
     );
   }

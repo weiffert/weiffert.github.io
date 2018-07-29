@@ -15,7 +15,9 @@ class Header extends Component {
     return (
       <div
         className={`Header ${
-          this.handleScroll(window.innerHeight * 0.3) ? "" : "fixed"
+          this.props.fixed || this.handleScroll(window.innerHeight * 0.3)
+            ? ""
+            : "fixed"
         }`}
       >
         <NavLink
