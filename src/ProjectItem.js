@@ -2,6 +2,8 @@ import React, { Component } from "react";
 import { NavLink } from "react-router-dom";
 import "./ProjectItem.css";
 
+import Project from "./Project";
+
 class ProjectItem extends Component {
   state = {
     expanded: false,
@@ -22,9 +24,11 @@ class ProjectItem extends Component {
         <NavLink to={`project/${this.props.project.id}`}>
           <h1 className="name">{this.props.project.name}</h1>
         </NavLink>
-        <p className={`description ${this.state.invisible ? "invisible" : ""}`}>
-          {this.props.project.description}
-        </p>
+        <div
+          className={`description ${this.state.invisible ? "invisible" : ""}`}
+        >
+          <Project />
+        </div>
       </div>
     );
   }
