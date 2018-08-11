@@ -9,7 +9,6 @@ class ProjectList extends Component {
     this.state = {
       colors: [],
       color: this.getColor(),
-      expanded: -1,
     };
     this.props.repos.forEach(repo => {
       this.state.colors.push(this.getColor());
