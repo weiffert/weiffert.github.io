@@ -44,17 +44,16 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header scrollY={this.state.scrollY} />
         <Switch>
-          <Route
+          {/* <Route
             path="/project/:id"
             render={({ match }) => (
               <Project
                 repo={this.state.repos.find(repo => repo.id == match.params.id)}
               />
             )}
-          />
-          <Route
+          /> */}
+          {/* <Route
             path="/project"
             render={() => (
               <ProjectList
@@ -62,10 +61,15 @@ class App extends Component {
                 repos={this.state.repos}
               />
             )}
-          />
+          /> */}
           <Route path="/about" render={() => <About />} />
-          <Route path="/contact" render={() => ""} />
-          <Route path="/" render={() => <Work repos={this.state.repos} />} />
+          {/* <Route path="/contact" render={() => ""} /> */}
+          <Route
+            path="/"
+            render={() => (
+              <Work repos={this.state.repos} scrollY={this.state.scrollY} />
+            )}
+          />
         </Switch>
         <Contact />
         <Footer />
