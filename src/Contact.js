@@ -5,7 +5,7 @@ class Contact extends Component {
   render() {
     return (
       <div className="Contact">
-        <h1>get in touch</h1>
+        <h1>Want to get in touch?</h1>
         <a
           target="_blank"
           rel="noopener noreferrer"
