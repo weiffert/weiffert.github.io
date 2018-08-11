@@ -21,9 +21,9 @@ class ProjectItem extends Component {
         style={{ backgroundColor: this.props.color }}
         onClick={this.handleClick}
       >
-        <NavLink to={`project/${this.props.project.id}`}>
-          <h1 className="name">{this.props.project.name}</h1>
-        </NavLink>
+        {/* <NavLink to={`project/${this.props.project.id}`}> */}
+        <h1 className="name">{this.props.project.name}</h1>
+        {/* </NavLink> */}
         <div
           className={`description ${this.state.invisible ? "invisible" : ""}`}
         >
