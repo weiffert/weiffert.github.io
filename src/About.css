@@ -1,0 +1,17 @@
+.About {
+  padding: 2rem;
+}
+
+.About .header {
+  display: flex;
+  align-items: baseline;
+}
+
+.About .header h1 {
+  margin-right: 1rem;
+}
+
+.About p {
+  margin: 2rem 0;
+  line-height: 2rem;
+}
