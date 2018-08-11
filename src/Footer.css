@@ -1,0 +1,12 @@
+.Footer {
+  background-color: black;
+  display: flex;
+  align-items: center;
+  padding: 2rem;
+  padding-top: 0;
+}
+
+.Footer a {
+  flex-grow: 1;
+  text-align: right;
+}

@@ -5,7 +5,7 @@ class Footer extends Component {
   render() {
     return (
       <div className="Footer">
-        <p>© 2018 by William Eiffert</p>
+        <p>© William Eiffert</p>
         <a
           target="_blank"
           rel="noopener noreferrer"
