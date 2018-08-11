@@ -1,0 +1,52 @@
+.ProjectItem {
+  width: 100px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 0;
+  transition: width cubic-bezier(0.6, -0.28, 0.74, 0.05) 0.75s;
+  z-index: 1;
+}
+
+.ProjectItem h1 {
+  position: relative;
+  transform-origin: left top;
+  transform: rotate(90deg);
+  left: 2.5rem;
+  justify-self: center;
+  white-space: nowrap;
+  transition: left ease-in-out 1s, transform ease-in-out 1s;
+}
+
+/* .ProjectItem.expanded h1 {
+  left: 0;
+  transform: rotate(0deg);
+} */
+
+.ProjectItem.expanded {
+  width: 500px;
+}
+
+.ProjectItem h1 {
+  margin: 0;
+}
+
+.ProjectItem .description {
+  z-index: 0;
+  margin-left: 100px;
+  margin-top: -25px;
+  margin-right: 25px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  display: none;
+}
+
+.ProjectItem.active .description {
+  display: block;
+  opacity: 0;
+  transition: opacity ease 1s;
+}
+
+.ProjectItem.active.expanded .description {
+  opacity: 1;
+}

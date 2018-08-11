@@ -1,0 +1,12 @@
+.Contact {
+  text-align: center;
+  padding: 2rem;
+}
+
+.Contact h1 {
+  margin-top: 0;
+}
+
+.Contact a {
+  margin: 1rem;
+}
