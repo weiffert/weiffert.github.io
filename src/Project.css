@@ -1,0 +1,7 @@
+.Project {
+  width: 100%;
+}
+
+.Project pre {
+  overflow: scroll;
+}
