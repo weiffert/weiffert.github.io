@@ -10,3 +10,7 @@
   margin: 0;
   display: inline-block;
 }
+.Splash a {
+  text-decoration: none;
+  color: white;
+}

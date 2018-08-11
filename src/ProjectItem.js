@@ -26,7 +26,10 @@ class ProjectItem extends Component {
     return (
       <div
         className={`ProjectItem ${this.state.expanded ? "expanded" : ""}`}
-        style={{ backgroundColor: this.props.color }}
+        style={{
+          backgroundColor: this.props.color,
+          color: this.props.fontColor,
+        }}
         onClick={this.handleClick}
         onTransitionEnd={this.handleTransition}
       >

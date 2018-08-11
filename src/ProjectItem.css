@@ -18,10 +18,10 @@
   transition: left ease-in-out 1s, transform ease-in-out 1s;
 }
 
-.ProjectItem.expanded h1 {
-  /* left: 0;
-  transform: rotate(0deg); */
-}
+/* .ProjectItem.expanded h1 {
+  left: 0;
+  transform: rotate(0deg);
+} */
 
 .ProjectItem.expanded {
   width: 500px;
@@ -35,7 +35,7 @@
   z-index: 0;
   margin-left: 100px;
   margin-top: -25px;
-  width: 355px;
+  margin-right: 25px;
   overflow-y: scroll;
   overflow-x: hidden;
   display: none;

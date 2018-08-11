@@ -8,31 +8,28 @@ class ProjectList extends Component {
     super(props);
     this.state = {
       colors: [],
-      color: this.getColor(),
     };
-    this.props.repos.forEach(repo => {
-      this.state.colors.push(this.getColor());
+    this.props.repos.forEach((repo, index) => {
+      this.state.colors.push(this.getColor(index + 1, this.props.repos.length));
     });
   }
 
-  getColor = () => {
-    return `rgb(${Math.random() * 255}, ${Math.random() *
-      255}, ${Math.random() * 255})`;
+  getColor = (index, total) => {
+    const multiplier = (index / total) * 255;
+    return `rgb(${multiplier}, ${multiplier}, ${multiplier})`;
   };
 
   render() {
     return (
-      <div
-        className="ProjectList sideScroll"
-        style={{ backgroundColor: this.state.color }}
-      >
+      <div className="ProjectList sideScroll">
         {this.props.repos.map(
           (repo, index) =>
             index < this.props.max ? (
               <ProjectItem
                 color={this.state.colors[index]}
                 project={repo}
-                key={repo.id}
+                key={index}
+                fontColor={index < this.props.max / 2 ? "white" : "black"}
               />
             ) : (
               ""
