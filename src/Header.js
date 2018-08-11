@@ -20,14 +20,14 @@ class Header extends Component {
             : "fixed"
         }`}
       >
-        <NavLink
+        {/* <NavLink
           to="/about"
           className={`links ${
             this.handleScroll(window.innerHeight * 0.8) ? "invisible" : ""
           }`}
         >
           <p>about</p>
-        </NavLink>
+        </NavLink> */}
         <NavLink to="/" className="title">
           <h1
             className={`${
