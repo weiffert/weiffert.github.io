@@ -9,7 +9,7 @@ class Work extends Component {
     return (
       <div className="Work">
         <Splash />
-        <ProjectList max={5} repos={this.props.repos} />
+        <ProjectList max={this.props.repos.length} repos={this.props.repos} />
       </div>
     );
   }

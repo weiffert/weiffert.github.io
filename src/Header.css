@@ -5,6 +5,7 @@
   align-items: center;
   flex-direction: row;
   background-color: black;
+  z-index: 1;
 }
 
 .Header.fixed {

@@ -37,14 +37,14 @@ class Header extends Component {
             WILLIAM EIFFERT
           </h1>
         </NavLink>
-        <NavLink
+        {/* <NavLink
           to="/project"
           className={`links ${
             this.handleScroll(window.innerHeight * 0.8) ? "invisible" : ""
           }`}
         >
           <p>work</p>
-        </NavLink>
+        </NavLink> */}
       </div>
     );
   }
