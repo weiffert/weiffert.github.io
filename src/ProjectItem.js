@@ -7,7 +7,7 @@ import Project from "./Project";
 class ProjectItem extends Component {
   state = {
     expanded: false,
-    invisible: true,
+    invisible: false,
   };
 
   handleClick = event => {
@@ -27,7 +27,7 @@ class ProjectItem extends Component {
         <div
           className={`description ${this.state.invisible ? "invisible" : ""}`}
         >
-          <Project />
+          <Project repo={this.props.project} />
         </div>
       </div>
     );

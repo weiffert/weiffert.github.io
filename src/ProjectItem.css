@@ -5,6 +5,7 @@
   flex-direction: column;
   flex-shrink: 0;
   transition: width cubic-bezier(0.6, -0.28, 0.74, 0.05) 0.75s;
+  z-index: 1;
 }
 
 .ProjectItem h1 {
@@ -31,5 +32,10 @@
 }
 
 .ProjectItem .description {
-  display: none;
+  z-index: 0;
+  margin-left: 100px;
+  margin-top: -25px;
+  width: 325px;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
