@@ -8,11 +8,12 @@
   z-index: 1;
 }
 
-.ProjectItem h1 {
+.ProjectItem > h1 {
   position: relative;
   transform-origin: left top;
   transform: rotate(90deg);
   left: 2.5rem;
+  margin: 0;
   justify-self: center;
   white-space: nowrap;
   transition: left ease-in-out 1s, transform ease-in-out 1s;
@@ -25,10 +26,6 @@
 
 .ProjectItem.expanded {
   width: 500px;
-}
-
-.ProjectItem h1 {
-  margin: 0;
 }
 
 .ProjectItem .description {
