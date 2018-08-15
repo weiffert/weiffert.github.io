@@ -33,6 +33,7 @@
 
 .ProjectItem .description {
   z-index: 0;
+  width: 375px;
   margin-left: 100px;
   margin-top: -25px;
   margin-right: 25px;
