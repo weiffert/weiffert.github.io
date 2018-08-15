@@ -7,22 +7,35 @@ class Project extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      body: "BAD wifi. PLEASE bear WITH me.",
+      body: "",
     };
-    if (false) {
-      fetch(`${this.props.repo.url}/readme`)
-        .then(response => response.json())
-        .then(response => {
-          const markdown = Base64.decode(response.content);
-          localStorage.setItem("markdown", JSON.stringify(markdown));
-          this.setState({ body: markdown });
-        });
-    } else {
-      this.state = {
-        body: JSON.parse(localStorage.getItem("markdown")),
-      };
-    }
   }
+
+  componentDidUpdate = () => {
+    console.log(this.props.load);
+    console.log(this.state.body === "");
+    if (this.props.load && this.state.body === "") {
+      this.setState({ body: "loading....." });
+      this.load();
+    }
+  };
+
+  load = () => {
+    // if (false) {
+    fetch(`${this.props.repo.url}/readme`)
+      .then(response => response.json())
+      .then(response => {
+        const markdown = Base64.decode(response.content);
+        localStorage.setItem("markdown", JSON.stringify(markdown));
+        this.setState({ body: markdown });
+      });
+    // } else {
+    //   this.state = {
+    //     body: JSON.parse(localStorage.getItem("markdown")),
+    //   };
+    // }
+  };
+
   render() {
     const reader = new Commonmark.Parser();
     const render = new Commonmark.HtmlRenderer();

@@ -12,26 +12,26 @@ import Contact from "./Contact";
 import Footer from "./Footer";
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      repos: [],
-      scrollY: 0,
-    };
-    if (false) {
-      fetch("https://api.github.com/users/weiffert/repos")
-        .then(response => response.json())
-        .then(repos => {
-          repos.sort((a, b) => (a.pushed_at > b.pushed_at ? -1 : 1));
-          window.localStorage.setItem("repos", JSON.stringify(repos));
-          this.setState({
-            repos,
-          });
+  state = {
+    repos: [],
+    scrollY: 0,
+  };
+
+  componentWillMount = () => {
+    // if (false) {
+    fetch("https://api.github.com/users/weiffert/repos")
+      .then(response => response.json())
+      .then(repos => {
+        repos.sort((a, b) => (a.pushed_at > b.pushed_at ? -1 : 1));
+        window.localStorage.setItem("repos", JSON.stringify(repos));
+        this.setState({
+          repos,
         });
-    } else {
-      this.state.repos = JSON.parse(window.localStorage.getItem("repos"));
-    }
-  }
+      });
+    // } else {
+    // this.state.repos = JSON.parse(window.localStorage.getItem("repos"));
+    // }
+  };
 
   componentDidMount = () => {
     window.addEventListener("scroll", this.handleScroll);

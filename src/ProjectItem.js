@@ -40,7 +40,7 @@ class ProjectItem extends Component {
           className={`description`}
           style={{ display: `${this.state.display ? "block" : "none"}` }}
         >
-          <Project repo={this.props.project} />
+          <Project load={this.state.expanded} repo={this.props.project} />
         </div>
       </div>
     );
