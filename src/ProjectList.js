@@ -5,7 +5,7 @@ import ProjectItem from "./ProjectItem";
 
 class ProjectList extends Component {
   getColor = (index, total) => {
-    const multiplier = (index / total) * 255;
+    const multiplier = Math.floor((index / total) * 255);
     return `rgb(${multiplier}, ${multiplier}, ${multiplier})`;
   };
 

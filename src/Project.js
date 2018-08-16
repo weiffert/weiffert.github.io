@@ -12,8 +12,6 @@ class Project extends Component {
   }
 
   componentDidUpdate = () => {
-    console.log(this.props.load);
-    console.log(this.state.body === "");
     if (this.props.load && this.state.body === "") {
       this.setState({ body: "loading....." });
       this.load();
