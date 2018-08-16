@@ -48,3 +48,10 @@
 .ProjectItem.active.expanded .description {
   opacity: 1;
 }
+
+@media (max-width: 540px) {
+  .ProjectItem > h1 {
+    font-size: 1.5rem;
+    left: 2rem;
+  }
+}

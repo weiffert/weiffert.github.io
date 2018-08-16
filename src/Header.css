@@ -43,3 +43,9 @@
 .Header p {
   display: inline-block;
 }
+
+@media (max-width: 540px) {
+  .Header h1 {
+    font-size: 3rem;
+  }
+}
