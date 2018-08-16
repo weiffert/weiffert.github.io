@@ -6,7 +6,15 @@
   padding-top: 0;
 }
 
-.Footer a {
+.Footer p {
   flex-grow: 1;
+}
+
+.Footer a {
   text-align: right;
+  transition: background-color ease 0.5s;
+}
+
+.Footer a:hover {
+  background-color: darkred;
 }

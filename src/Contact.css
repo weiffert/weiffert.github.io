@@ -10,4 +10,9 @@
 .Contact a {
   margin: 1rem;
   display: inline-block;
+  transition: background-color ease 0.5s;
+}
+
+.Contact a:hover {
+  background-color: darkred;
 }
