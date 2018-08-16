@@ -56,3 +56,10 @@
     left: 2rem;
   }
 }
+
+@media (max-width: 425px) {
+  .ProjectItem .description {
+    width: 320px;
+    font-size: 0.9rem;
+  }
+}
