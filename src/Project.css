@@ -7,6 +7,12 @@
 
 .Project a {
   color: white;
+  text-decoration: grey dotted underline;
+  transition: background-color ease 0.25s;
+}
+
+.Project a:hover {
+  background-color: darkred;
 }
 
 .Project pre {
