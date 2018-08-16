@@ -30,11 +30,12 @@ class ProjectItem extends Component {
           backgroundColor: this.props.color,
           color: this.props.fontColor,
         }}
-        onClick={this.handleClick}
         onTransitionEnd={this.handleTransition}
       >
         {/* <NavLink to={`project/${this.props.project.id}`}> */}
-        <h1 className="name">{this.props.project.name}</h1>
+        <h1 className="name"
+        onClick={this.handleClick}
+        >{this.props.project.name}</h1>
         {/* </NavLink> */}
         <div
           className={`description`}
