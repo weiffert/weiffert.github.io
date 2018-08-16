@@ -9,6 +9,7 @@
 }
 
 .ProjectItem > h1 {
+  cursor: pointer;
   position: relative;
   transform-origin: left top;
   transform: rotate(90deg);
