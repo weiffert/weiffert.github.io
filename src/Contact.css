@@ -9,4 +9,5 @@
 
 .Contact a {
   margin: 1rem;
+  display: inline-block;
 }
