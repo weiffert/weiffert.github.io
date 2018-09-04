@@ -31,6 +31,14 @@ class About extends Component {
           If you have an idea you want realized or a project you need help with,
           drop me a line.
         </p>
+        <p>
+          <a
+            href="https://drive.google.com/open?id=1O_f49TpVKEb3_zQNebzETExTI--CGdJP"
+            target="_blank"
+          >
+            {"< Resume />"}
+          </a>
+        </p>
       </div>
     );
   }
