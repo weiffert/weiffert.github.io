@@ -12,6 +12,14 @@ class About extends Component {
           <h1>Hello!</h1>
           <h2>My name is William Eiffert</h2>
         </div>
+         <p>
+          <a
+            href="https://drive.google.com/open?id=1O_f49TpVKEb3_zQNebzETExTI--CGdJP"
+            target="_blank"
+          >
+            {"< Resume />"}
+          </a>
+        </p>
         <p>
           I am a student developer with budding curiosity from security to
           development. I have experimented in low level C, object oriented Java,
@@ -31,15 +39,7 @@ class About extends Component {
           If you have an idea you want realized or a project you need help with,
           drop me a line.
         </p>
-        <p>
-          <a
-            href="https://drive.google.com/open?id=1O_f49TpVKEb3_zQNebzETExTI--CGdJP"
-            target="_blank"
-          >
-            {"< Resume />"}
-          </a>
-        </p>
-      </div>
+     </div>
     );
   }
 }
