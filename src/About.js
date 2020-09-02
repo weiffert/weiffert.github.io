@@ -26,7 +26,7 @@ class About extends Component {
           and super capable JavaScript and React.
         </p>
         <p>
-          My entrallment with code began over four years ago with simplistic
+          My enthrallment with code began over four years ago with simplistic
           Codecademy tutorials, and once I caught the bug, there was no turning
           back. My first organized experience was in classes, but quickly I
           devoted more of my personal thoughts and time to the subject. The
