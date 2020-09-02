@@ -14,7 +14,7 @@ class About extends Component {
         </div>
          <p>
           <a
-            href="https://drive.google.com/open?id=1O_f49TpVKEb3_zQNebzETExTI--CGdJP"
+            href="https://drive.google.com/file/d/1UXZD6cf6yZwtI7cAW-37T8piALo64gpq/view?usp=sharing"
             target="_blank"
           >
             {"< Resume />"}
